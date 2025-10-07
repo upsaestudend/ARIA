@@ -141,7 +141,7 @@ def main():
 
     # Imagen inferior decorativa
     st.markdown("---")
-    st.image("imagen6.png", caption="Representación gráfica", use_column_width=True)
+    st.image("imagen6.png", caption="Representación gráfica", use_container_width=True)
 
 if __name__ == "__main__":
     main()
