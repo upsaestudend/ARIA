@@ -75,4 +75,15 @@ def main():
         valores["altura"] = st.number_input("Altura (cm)", min_value=0.0, value=3.0, step=0.1)
 
     elif figura == "circulo":
-        valores["radio"] = st.number_input("Radio del círculo (cm)", min_v)
+        valores["radio"] = st.number_input("Radio del círculo (cm)", min_value=0.0, value=3.0, step=0.1)
+
+    st.markdown("---")
+    if st.button("Calcular"):
+        area = calcular_area(figura, valores)
+        perimetro = calcular_perimetro(figura, valores)
+
+        st.success(f"**Área:** {area:.2f} cm²")
+        st.success(f"**Perímetro:** {perimetro:.2f} cm")
+
+if __name__ == "__main__":
+    main()
